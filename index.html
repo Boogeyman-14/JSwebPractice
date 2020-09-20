@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Challenges</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Challenge 1: Age in Days</h2>
+      <div class="flex-items">
+        <div>
+          <button class="btn btn-primary" onclick="ageInDays()">
+            Click here
+          </button>
+        </div>
+        <div>
+          <button class="btn btn-danger" onclick="reset()">Reset</button>
+        </div>
+      </div>
+
+      <div class="flex-items">
+        <div id="flex-item-result"></div>
+      </div>
+    </div>
+
+    <div class="container-2">
+      <h2>Challenge 2: Cat Generator</h2>
+      <button class="btn btn-success" id="catgenerator" onclick="cat()">
+        Generate
+      </button>
+      <div class="flex-items-2" id="cat-gen"></div>
+      <!-- <img src="https://cdn2.thecatapi.com/images/80v.gif" alt="" /> -->
+    </div>
+
+    <div class="container-3">
+      <h2>Challenge 3: Rock, Paper, Scissors</h2>
+      <div class="flex-box-rps" id="flex-box-rps-div">
+        <img
+          id="rock"
+          src="rps/rock.png"
+          height="150"
+          width="150"
+          alt=""
+          onclick="rpsGame(this)"
+        />
+        <img
+          id="paper"
+          src="rps/paper.png"
+          height="150"
+          width="150"
+          alt=""
+          onclick="rpsGame(this)"
+        />
+        <img
+          id="scissors"
+          src="rps/scissor.png"
+          height="150"
+          width="150"
+          alt=""
+          onclick="rpsGame(this)"
+        />
+      </div>
+    </div>
+
+    <div class="container-4">
+      <h2 id="change-color">Change 4: Change the Color of Buttons</h2>
+      <div class="flex-box-pick-color">
+        <form action="">
+          <select
+            name="backdrop"
+            id="background"
+            onchange="buttonColorChange(this)"
+          >
+            <option value="random">Random</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="reset">Reset</option>
+          </select>
+        </form>
+        <button class="btn btn-primary">Polly</button>
+        <button class="btn btn-danger">Thomas</button>
+        <button class="btn btn-warning">Aurthur</button>
+        <button class="btn btn-success">John</button>
+      </div>
+    </div>
+
+    <div class="container-5">
+      <h2>Challenge 5: Blackjack</h2>
+      <h3><span id="blackjack-result">Let's Play</span></h3>
+      <div class="flex-blackjack-row-1">
+        <div id="your-box">
+          <h2>You: <span id="your-blackjack-result">0</span></h2>
+        </div>
+
+        <div id="dealer-box">
+          <h2>Dealer: <span id="dealer-blackjack-result">0</span></h2>
+        </div>
+      </div>
+      <div class="flex-blackjack-row-2">
+        <div>
+          <button class="btn-lg btn-primary mr-2" id="blackjack-hit-button">
+            Hit
+          </button>
+          <button class="btn-lg btn-warning mr-2" id="blackjack-stand-button">
+            Stand
+          </button>
+          <button class="btn-lg btn-danger" id="blackjack-deal-button">
+            Deal
+          </button>
+        </div>
+      </div>
+      <div class="flex-blackjack-row-3">
+        <table>
+          <tr>
+            <th>Wins</th>
+            <th>Losses</th>
+            <th>Draws</th>
+          </tr>
+          <tr>
+            <td><span id="wins">0</span></td>
+            <td><span id="losses">0</span></td>
+            <td><span id="draws">0</span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
